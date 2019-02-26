@@ -19,10 +19,10 @@ def isReflexive(A, R)
     b=[]
     for a1, a2 in R:
     	if (a1==a2):
-    		check.append((a1,a2))
-    		b.append(a1)
+    	    check.append((a1,a2))
+    	    b.append(a1)
     	if(a1 not in a):
-    		a.append(a1)
+    	    a.append(a1)
     if (set(a)==set(b)):
     	return True
     else:
@@ -32,15 +32,15 @@ def isIrreflexive(A, R):
     '''TODO: Your code here'''
     for a1, a2 in R:
     	if (a1==a2):
-    		return False
+    	    return False
     return True
 
 def isTransitive(A, R):
     '''TODO: Your code here'''
     for (a,b) in R:
     	for(c,d) in R:
-    		if b==c and (a,d) not in R:
-    			return False
+    	    if b==c and (a,d) not in R:
+    		return False
     return True
 
 def isAntisymmetric(A, R):
@@ -52,17 +52,17 @@ def isAntisymmetric(A, R):
     
 def isSymmetric(A, R):
     '''TODO: Your code here'''
-	for(a1, a2) in R:
-	    if (a1,a2) in R and (a2, a1) in R:
-    	return False
+    for(a1, a2) in R:
+        if (a1,a2) in R and (a2, a1) in R:
+            return False
     return True
     
 def isAsymmetric(A, R):
     '''TODO: Your code here'''
-    	for (a1,a2) in R:
-		if (a1,a2) in R and (a1,a2) in R:
-			return False
-	return True
+    for (a1,a2) in R:
+	if (a1,a2) in R and (a1,a2) in R:
+	    return False
+    return True
 	
 if __name__ == '__main__': ''' Delete this line and the ones below it, or
     write code in this if-block which will not run by the autograder.'''
